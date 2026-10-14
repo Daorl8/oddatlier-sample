@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ODD ATELIER 오드아뜰리에 | Brunch &amp; Dining · 연남동 브런치 카페</title>
+<meta name="description" content="Seasonal brunch and slow drinks in Yeonnam-dong, Seoul. 연남동 동교로45길 브런치 카페 오드아뜰리에. 제철 재료로 만든 브런치와 정성스레 만든 음료. 반려동물 동반 가능." />
+<link rel="canonical" href="https://oddatelier-sample.lgt3232.workers.dev/" />
+<meta name="theme-color" content="#F7F4EE" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="ODD ATELIER" />
+<meta property="og:title" content="ODD ATELIER 오드아뜰리에 | Brunch &amp; Dining, Yeonnam" />
+<meta property="og:description" content="Seasonal brunch, slow afternoons. 연남동 벽돌집 브런치 카페." />
+<meta property="og:url" content="https://oddatelier-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://oddatelier-sample.lgt3232.workers.dev/og-odd.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<!-- 시안 도메인 = oddatelier-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 5곳 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "오드아뜰리에 ODD ATELIER",
+  "url": "https://oddatelier-sample.lgt3232.workers.dev/",
+  "image": "https://oddatelier-sample.lgt3232.workers.dev/og-odd.jpg",
+  "telephone": "+82-507-1332-2806",
+  "servesCuisine": "Brunch",
+  "description": "연남동 브런치 카페. 신선한 제철 재료로 만든 브런치와 정성스레 제조한 음료.",
+  "address": { "@type": "PostalAddress", "streetAddress": "동교로45길 8 1층", "addressLocality": "마포구", "addressRegion": "서울특별시", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "19:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/odd_atelier_yeonnam/", "https://www.tiktok.com/@odd.atelier.yeonnam", "https://www.facebook.com/1312880675240119"]
+}
+</script>
+<script>document.documentElement.className+=' js';</script>
+<style>
+/* ── 폰트 (로컬 서브셋 · OFL)
+     영문 = Inter Tight (GHEA Helvetica 무료 대체 · 촘촘한 네오 그로테스크)
+     한글 = Pretendard */
+@font-face{ font-family:"OA Sans"; font-weight:300 700; font-display:swap; src:url("oa-intertight.woff2") format("woff2"); }
+@font-face{ font-family:"OA Ko"; font-weight:300 700; font-display:swap; src:url("oa-pretendard.woff2") format("woff2"); }
+
+:root{
+  --linen:#F7F4EE;     /* 흰 회벽 (바탕) */
+  --white:#FFFFFF;
+  --brick:#4A2C22;     /* 갈색 벽돌 (큰 면) */
+  --brick-2:#6E4334;   /* 밝은 벽돌 (선·호버) */
+  --leaf:#3F5A33;      /* 잎 초록 (작은 포인트) · 회벽 7.0:1 */
+  --ink:#2B211D;
+  --soft:#6B6158;      /* 회벽 5.5:1 */
+  --line:#E2DBD0;
+  --on-brick:#F7F4EE;
+  --on-brick-soft:#D8CFC4; /* 벽돌 8.1:1 */
+  --sans:"OA Sans","OA Ko",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --ko:"OA Ko","OA Sans",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --wrap:1200px;
+}
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--linen); color:var(--ink); font-family:var(--sans); font-size:15px; line-height:1.7; letter-spacing:-.01em; word-break:keep-all; overflow-x:hidden; }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; text-decoration:none; }
+:focus-visible{ outline:2px solid var(--leaf); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, var(--wrap)); margin:0 auto; }
+
+/* 타이포 */
+.label{ display:flex; align-items:center; gap:10px; margin:0; font-size:.74rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; }
+.label::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--leaf); }
+.label .ko{ font-family:var(--ko); font-weight:500; letter-spacing:.02em; text-transform:none; color:var(--soft); }
+h1,h2,h3{ font-weight:500; letter-spacing:-.035em; margin:0; }
+h2{ font-size:clamp(2.2rem,5.4vw,4.2rem); line-height:1.02; }
+.ko-t{ display:block; font-family:var(--ko); font-size:1rem; font-weight:500; letter-spacing:-.01em; line-height:1.55; color:var(--soft); margin-top:16px; }
+.lead{ color:var(--soft); max-width:34em; margin:0; font-family:var(--ko); }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; gap:10px; height:50px; padding:0 22px; border:1px solid var(--ink); font-size:.86rem; font-weight:500; transition:background .25s ease, color .25s ease, border-color .25s ease; }
+.btn small{ font-family:var(--ko); font-weight:400; opacity:.8; }
+.btn.brick{ background:var(--brick); border-color:var(--brick); color:var(--on-brick); }
+.btn.line{ background:transparent; }
+@media (hover:hover){
+  .btn.brick:hover{ background:var(--leaf); border-color:var(--leaf); }
+  .btn.line:hover{ background:var(--ink); color:var(--linen); }
+}
+
+/* 헤더 */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(247,244,238,.94); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; height:66px; }
+.brand{ display:flex; flex-direction:column; line-height:1; }
+.brand b{ font-weight:600; font-size:1.12rem; letter-spacing:.04em; }
+.brand span{ font-size:.6rem; letter-spacing:.3em; margin-top:5px; color:var(--soft); }
+.nav{ display:none; gap:30px; font-size:.84rem; }
+.nav a{ position:relative; padding:4px 0; }
+.nav a::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--leaf); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+@media (hover:hover){ .nav a:hover::after{ transform:scaleX(1); } }
+.site-head .btn{ height:40px; padding:0 16px; font-size:.8rem; }
+@media (min-width:900px){ .nav{ display:flex; } }
+
+/* 히어로 */
+.hero{ padding:clamp(28px,5vw,64px) 0 clamp(60px,8vw,110px); }
+.hero .wrap{ display:grid; gap:36px; }
+.hero h1{ font-size:clamp(3.1rem,9vw,7.4rem); line-height:.94; margin:24px 0 0; }
+.hero h1 span{ color:var(--brick-2); }
+.hero .ko-t{ font-size:1.08rem; color:var(--ink); margin-top:26px; }
+.hero .lead{ margin:12px 0 30px; }
+.cta{ display:flex; flex-wrap:wrap; gap:10px; }
+.today{ display:flex; flex-wrap:wrap; gap:6px 22px; margin:36px 0 0; padding:16px 0 0; border-top:1px solid var(--line); font-size:.82rem; color:var(--soft); }
+.today b{ color:var(--ink); font-weight:500; margin-right:6px; }
+.slides{ position:relative; margin:0; aspect-ratio:4/5; overflow:hidden; background:var(--brick); }
+.slides img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.05); transition:opacity 1.4s ease, transform 7s ease; }
+.slides img.on{ opacity:1; transform:scale(1); }
+.slides figcaption{ position:absolute; right:0; bottom:0; padding:10px 16px; background:var(--linen); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; }
+@media (min-width:900px){ .hero .wrap{ grid-template-columns:1.15fr .85fr; align-items:end; gap:60px; } }
+
+/* 섹션 */
+.sec{ padding:clamp(76px,10vw,140px) 0; }
+.sec.white{ background:var(--white); }
+.sec.brick{ background:var(--brick); color:var(--on-brick); }
+.sec.brick .label .ko, .sec.brick .ko-t, .sec.brick .lead{ color:var(--on-brick-soft); }
+.sec.brick .label::before{ background:var(--on-brick); }
+.head{ display:grid; gap:20px; margin-bottom:clamp(36px,5vw,64px); }
+@media (min-width:900px){ .head.split{ grid-template-columns:1fr 1fr; align-items:end; gap:60px; } }
+
+/* About */
+.about{ display:grid; gap:44px; }
+.about .pics{ display:grid; grid-template-columns:1.2fr .8fr; gap:12px; align-items:end; }
+.about .pics img{ width:100%; object-fit:cover; }
+.about .pics .a{ aspect-ratio:3/4; }
+.about .pics .b{ aspect-ratio:9/16; }
+.about .txt p{ font-family:var(--ko); margin:0 0 14px; }
+.notes{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:34px; border-top:1px solid var(--ink); }
+.notes div{ padding:18px 14px 0 0; }
+.notes b{ display:block; font-size:1.5rem; font-weight:500; letter-spacing:-.03em; line-height:1.1; }
+.notes span{ display:block; margin-top:6px; font-family:var(--ko); font-size:.82rem; color:var(--soft); }
+@media (min-width:900px){ .about{ grid-template-columns:1fr 1fr; gap:80px; align-items:center; } }
+
+/* Plates */
+.plates{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.plates figure{ margin:0; overflow:hidden; background:var(--line); }
+.plates img{ width:100%; aspect-ratio:3/4; object-fit:cover; transition:transform 1.2s ease; }
+.plates .w{ grid-column:1 / -1; }
+.plates .w img{ aspect-ratio:3/2; }
+@media (hover:hover){ .plates figure:hover img{ transform:scale(1.04); } }
+@media (min-width:900px){
+  .plates{ grid-template-columns:repeat(4,1fr); gap:16px; }
+  .plates .w{ grid-column:span 2; grid-row:span 2; }
+  .plates .w img{ aspect-ratio:auto; height:100%; }
+}
+.menu-note{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:18px; margin-top:34px; padding-top:22px; border-top:1px solid var(--line); }
+.menu-note p{ margin:0; font-family:var(--ko); color:var(--soft); font-size:.92rem; }
+
+/* Drinks (벽돌 면) */
+.drinks{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.drinks img{ width:100%; aspect-ratio:3/4; object-fit:cover; }
+@media (min-width:900px){ .drinks{ gap:18px; } .drinks figure:nth-child(2){ margin-top:60px; } }
+.drinks figure{ margin:0; }
+
+/* Pets */
+.pets{ display:grid; gap:40px; }
+.pets figure{ margin:0; }
+.pets img{ width:100%; aspect-ratio:4/5; object-fit:cover; }
+.rules{ display:grid; gap:0; margin-top:30px; border-top:1px solid var(--ink); }
+.rules div{ display:grid; grid-template-columns:110px 1fr; gap:14px; padding:18px 0; border-bottom:1px solid var(--line); }
+.rules dt{ font-size:.74rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding-top:3px; }
+.rules dt small{ display:block; font-family:var(--ko); font-weight:400; letter-spacing:0; text-transform:none; color:var(--soft); font-size:.82rem; }
+.rules dd{ margin:0; font-family:var(--ko); font-size:.93rem; }
+.rules dd p{ margin:0 0 4px; }
+@media (min-width:900px){ .pets{ grid-template-columns:.85fr 1.15fr; gap:80px; align-items:center; } }
+
+/* Visit */
+.visit{ display:grid; gap:44px; }
+.info{ margin:0; border-top:1px solid var(--ink); }
+.info .row{ display:grid; grid-template-columns:96px 1fr; gap:14px; padding:18px 0; border-bottom:1px solid var(--line); }
+.info dt{ font-size:.74rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; padding-top:3px; }
+.info dt small{ display:block; font-family:var(--ko); font-weight:400; letter-spacing:0; text-transform:none; color:var(--soft); font-size:.82rem; }
+.info dd{ margin:0; font-family:var(--ko); font-size:.93rem; }
+.info dd p{ margin:0 0 8px; }
+.info dd p:last-child{ margin:0; }
+.info .en{ display:block; font-family:var(--sans); color:var(--soft); font-size:.84rem; }
+.hours{ display:grid; grid-template-columns:auto auto 1fr; gap:4px 16px; font-variant-numeric:tabular-nums; }
+.hours .lo{ color:var(--soft); font-size:.84rem; }
+.hours .off{ color:var(--brick-2); }
+.links{ display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--ink); border-left:1px solid var(--line); margin-top:28px; }
+.links a{ display:flex; flex-direction:column; justify-content:space-between; min-height:88px; padding:14px 16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); transition:background .25s ease, color .25s ease; }
+.links a b{ font-weight:500; font-size:.9rem; }
+.links a span{ font-family:var(--ko); font-size:.78rem; color:var(--soft); }
+@media (hover:hover){ .links a:hover{ background:var(--brick); color:var(--on-brick); } .links a:hover span{ color:var(--on-brick-soft); } }
+@media (min-width:600px){ .links{ grid-template-columns:repeat(4,1fr); } }
+.mapframe{ width:100%; height:100%; min-height:380px; border:0; }
+@media (min-width:900px){ .visit{ grid-template-columns:1fr 1fr; gap:64px; align-items:stretch; } }
+
+/* 푸터 (벽돌) */
+.foot{ background:var(--brick); color:var(--on-brick); padding:56px 0 64px; font-size:.84rem; }
+.foot .wrap{ display:grid; gap:26px; }
+.foot .big{ font-size:clamp(2.6rem,10vw,7rem); font-weight:600; letter-spacing:-.04em; line-height:.9; }
+.foot p{ margin:0; font-family:var(--ko); color:var(--on-brick-soft); }
+.foot nav{ display:flex; flex-wrap:wrap; gap:6px 20px; }
+.foot nav a{ border-bottom:1px solid var(--brick-2); }
+@media (hover:hover){ .foot nav a:hover{ border-color:var(--on-brick); } }
+
+/* 리빌 */
+.js .reveal{ opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease; }
+.js .reveal.in{ opacity:1; transform:none; }
+</style>
+<noscript><style>.reveal{ opacity:1 !important; transform:none !important; } .slides img:first-child{ opacity:1; transform:none; }</style></noscript>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ODD ATELIER 처음으로"><b>ODD ATELIER</b><span>BRUNCH &amp; DINING</span></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#about">About</a><a href="#plates">Plates</a><a href="#drinks">Drinks</a><a href="#pets">Pets</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="btn brick" href="#visit">Visit <small>오시는 길</small></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">Brunch &amp; Dining<span class="ko">연남동 브런치 카페</span></p>
+        <h1 id="hero-h">Seasonal brunch, <span>slow</span> afternoons.</h1>
+        <p class="ko-t">자연을 담은 브런치, 편안하게 머무는 오후</p>
+        <p class="lead">연트럴파크 옆 골목, 갈색 벽돌집 1층. 신선한 제철 재료로 만든 브런치와 정성스레 만든 음료를 준비해요.</p>
+        <div class="cta">
+          <a class="btn brick" href="https://naver.me/5hoYbLUn" target="_blank" rel="noopener">Naver Place <small>네이버</small></a>
+          <a class="btn line" href="https://www.instagram.com/odd_atelier_yeonnam/" target="_blank" rel="noopener">Instagram <small>인스타그램</small></a>
+        </div>
+        <p class="today"><span><b>Tue – Sun</b>Open 09:00</span><span><b>Mon</b>Closed 정기휴무</span><span><b>Pets</b>Welcome 반려동물 동반</span></p>
+      </div>
+      <figure class="slides reveal" id="slides" aria-label="오드아뜰리에 매장 사진">
+        <img class="on" src="oa-hero.webp" alt="갈색 벽돌 벽에 달린 금색 ODD ATELIER 간판과 창가의 꽃병들" width="1400" height="1885" fetchpriority="high" />
+        <img src="oa-terrace.webp" alt="벽돌 담장과 흰 수국이 핀 매장 입구 골목" width="1000" height="1777" />
+        <img src="oa-door.webp" alt="머스터드색 나무 문과 화분이 놓인 매장 정면" width="720" height="1280" />
+        <figcaption id="slide-cap">Dongyo-ro 45-gil 8</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec white" id="about" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div class="pics reveal">
+        <img class="a" loading="lazy" src="oa-window.webp" alt="격자 창 앞의 둥근 나무 테이블과 의자" width="1000" height="1330" />
+        <img class="b" loading="lazy" src="oa-hydrangea.webp" alt="흰 수국 너머로 보이는 벽돌 건물과 간판" width="640" height="1136" />
+      </div>
+      <div class="txt reveal">
+        <p class="label">About<span class="ko">소개</span></p>
+        <h2 id="about-h" style="margin-top:20px">Come in lightly,<br />stay a while.<span class="ko-t">누구든 가벼운 마음으로 들어와 편안하게</span></h2>
+        <div style="margin-top:28px">
+          <p class="lead">오드 아뜰리에는 바쁜 일상 속, 누구든 가벼운 마음으로 들어와 편안하게 머무를 수 있는 브런치 &amp; 카페예요.</p>
+          <p class="lead">신선한 제철 재료로 만든 브런치와 정성스레 제조한 음료로, 오드 아뜰리에에서의 편안한 쉼을 즐겨보세요.</p>
+        </div>
+        <div class="notes">
+          <div><b>Seasonal</b><span>제철 재료</span></div>
+          <div><b>Brunch</b><span>브런치 &amp; 다이닝</span></div>
+          <div><b>Terrace</b><span>테라스 · 반려동물</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="plates" aria-labelledby="plates-h">
+    <div class="wrap">
+      <div class="head split reveal">
+        <div>
+          <p class="label">Plates<span class="ko">브런치</span></p>
+          <h2 id="plates-h" style="margin-top:20px">Made with<br />the season.<span class="ko-t">제철 재료로 차리는 한 접시</span></h2>
+        </div>
+        <p class="lead">계절에 따라 재료와 구성이 바뀌어요. 지금의 메뉴와 가격은 네이버 플레이스에서 확인해 주세요.</p>
+      </div>
+      <div class="plates">
+        <figure class="w reveal"><img loading="lazy" src="oa-f6.webp" alt="붉은 배경 위 구운 고기와 달걀 프라이를 올린 플레이트" width="900" height="1197" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f12.webp" alt="민트색 접시에 얇게 썬 버섯과 소스를 올린 요리" width="900" height="900" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f4.webp" alt="레몬을 곁들인 오일 파스타" width="900" height="1197" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f3.webp" alt="햄과 샐러드를 올린 오픈 샌드위치" width="900" height="1125" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f10.webp" alt="스크램블 에그와 소시지, 샌드위치를 담은 브런치 플레이트" width="900" height="1197" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f8.webp" alt="새우와 채소를 올린 샐러드 볼" width="900" height="1197" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f9.webp" alt="크림 소스 위에 올린 구운 고기 요리" width="900" height="1198" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f1.webp" alt="얇게 썬 버섯을 듬뿍 올린 요리" width="900" height="1197" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-f5.webp" alt="짙은 갈색 빵 위에 생크림을 듬뿍 올린 접시" width="900" height="1197" /></figure>
+      </div>
+      <div class="menu-note reveal">
+        <p>메뉴 · 가격 · 품절 여부는 네이버 플레이스가 가장 정확해요.</p>
+        <a class="btn line" href="https://naver.me/5hoYbLUn" target="_blank" rel="noopener">See the menu <small>메뉴 보기</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec brick" id="drinks" aria-labelledby="drinks-h">
+    <div class="wrap">
+      <div class="head split reveal">
+        <div>
+          <p class="label">Drinks<span class="ko">음료</span></p>
+          <h2 id="drinks-h" style="margin-top:20px">Poured<br />with care.<span class="ko-t">정성스레 제조한 음료</span></h2>
+        </div>
+        <p class="lead">커피와 계절 음료, 스파클링 주스까지. 브런치와 함께, 혹은 테라스에서 한 잔만.</p>
+      </div>
+      <div class="drinks">
+        <figure class="reveal"><img loading="lazy" src="oa-d2.webp" alt="크림을 올린 커피와 아이스 아메리카노" width="900" height="1212" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-d3.webp" alt="자몽 슬라이스를 올린 붉은 그라데이션 에이드" width="900" height="1169" /></figure>
+        <figure class="reveal"><img loading="lazy" src="oa-d1.webp" alt="사과 사이에 놓인 스파클링 애플 주스 병" width="900" height="1212" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec white" id="pets" aria-labelledby="pets-h">
+    <div class="wrap pets">
+      <figure class="reveal"><img loading="lazy" src="oa-terrace2.webp" alt="흰 수국 옆 테라스 테이블에서 음료 사진을 찍는 손님" width="1000" height="1330" /></figure>
+      <div class="reveal">
+        <p class="label">Pets &amp; Terrace<span class="ko">반려동물 동반</span></p>
+        <h2 id="pets-h" style="margin-top:20px">Bring your<br />best friend.<span class="ko-t">오드아뜰리에는 반려동물 출입이 가능해요</span></h2>
+        <dl class="rules">
+          <div><dt>Indoor<small>실내</small></dt><dd><p>이동할 때는 켄넬이나 이동가방을 이용해 주세요.</p><p>식사 중에도 이동장 안에 머물러 주세요.</p></dd></div>
+          <div><dt>Terrace<small>테라스</small></dt><dd><p>이동장 없이 편하게 이용할 수 있어요.</p><p>리드줄 착용과 보호자 관리를 꼭 부탁드려요.</p></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="label">Visit<span class="ko">오시는 길</span></p>
+        <h2 id="visit-h">Find the brick house.<span class="ko-t">홍대입구역 3번 출구에서 도보 7~8분</span></h2>
+      </div>
+      <div class="visit">
+        <div class="reveal">
+          <dl class="info">
+            <div class="row"><dt>Address<small>주소</small></dt><dd><p>서울 마포구 동교로45길 8 1층<span class="en">1F, 8 Donggyo-ro 45-gil, Mapo-gu, Seoul</span></p></dd></div>
+            <div class="row"><dt>Subway<small>지하철</small></dt><dd><p>홍대입구역 3번 출구에서 연트럴파크를 따라 직진한 뒤, 응큼떡볶이와 한사발포차 사이 골목 안쪽으로 오시면 돼요.</p></dd></div>
+            <div class="row"><dt>Bus<small>버스</small></dt><dd><p>'연남동' 또는 '연희104고지앞' 정류장에서 내려 도보 4~5분.</p></dd></div>
+            <div class="row"><dt>Car<small>자차</small></dt><dd><p>내비에 '동교로45길 8' 검색. 전용 주차 공간이 없어 근처 공영주차장 이용을 권장해요.</p></dd></div>
+            <div class="row"><dt>Hours<small>영업시간</small></dt><dd>
+              <div class="hours">
+                <span>Tue – Fri 화–금</span><span>09:00 – 18:00</span><span class="lo">L.O. 17:55</span>
+                <span>Sat – Sun 토–일</span><span>09:00 – 19:00</span><span class="lo">L.O. 18:55</span>
+                <span>Mon 월</span><span class="off">Closed</span><span class="lo">정기휴무</span>
+              </div>
+            </dd></div>
+            <div class="row"><dt>Call<small>전화</small></dt><dd><p><a href="tel:050713322806">0507-1332-2806</a></p></dd></div>
+          </dl>
+          <nav class="links" aria-label="오드아뜰리에 채널">
+            <a href="https://naver.me/5hoYbLUn" target="_blank" rel="noopener"><b>Naver</b><span>네이버 플레이스</span></a>
+            <a href="https://share.google/kgcqYzHcQHVUbshYL" target="_blank" rel="noopener"><b>Google</b><span>구글 지도</span></a>
+            <a href="https://pf.kakao.com/_yxbxmiX" target="_blank" rel="noopener"><b>Kakao</b><span>카카오톡 채널</span></a>
+            <a href="https://www.instagram.com/odd_atelier_yeonnam/" target="_blank" rel="noopener"><b>Instagram</b><span>@odd_atelier_yeonnam</span></a>
+            <a href="https://www.tiktok.com/@odd.atelier.yeonnam" target="_blank" rel="noopener"><b>TikTok</b><span>@odd.atelier.yeonnam</span></a>
+            <a href="https://www.facebook.com/1312880675240119" target="_blank" rel="noopener"><b>Facebook</b><span>페이스북 페이지</span></a>
+            <a href="https://www.threads.net/@odd_atelier_yeonnam" target="_blank" rel="noopener"><b>Threads</b><span>@odd_atelier_yeonnam</span></a>
+            <a href="tel:050713322806"><b>Call</b><span>전화 걸기</span></a>
+          </nav>
+        </div>
+        <iframe class="mapframe reveal" src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EB%8F%99%EA%B5%90%EB%A1%9C45%EA%B8%B8%208&amp;output=embed" title="오드아뜰리에 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="big" aria-hidden="true">ODD ATELIER</div>
+    <p>오드아뜰리에 · 서울 마포구 동교로45길 8 1층 · 0507-1332-2806</p>
+    <p>화–금 09:00–18:00 · 토–일 09:00–19:00 · 월 정기휴무</p>
+    <nav aria-label="푸터 링크"><a href="https://www.instagram.com/odd_atelier_yeonnam/" target="_blank" rel="noopener">Instagram</a><a href="https://naver.me/5hoYbLUn" target="_blank" rel="noopener">Naver</a><a href="https://pf.kakao.com/_yxbxmiX" target="_blank" rel="noopener">Kakao</a><a href="#top">Top</a></nav>
+    <p>© ODD ATELIER</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* 리빌 (IntersectionObserver + 2.4초 안전망) */
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  var show=function(el){ el.classList.add('in'); };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } }); }, {threshold:.06});
+    items.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ items.forEach(show); }, 2400);
+  } else { items.forEach(show); }
+
+  /* 히어로 크로스페이드 (setInterval 강제) */
+  var slides=[].slice.call(document.querySelectorAll('#slides img'));
+  var caps=['Dongyo-ro 45-gil 8','The brick lane','Front door'], si=0, cap=document.getElementById('slide-cap');
+  setInterval(function(){
+    slides[si].classList.remove('on'); si=(si+1)%slides.length; slides[si].classList.add('on'); cap.textContent=caps[si];
+  }, 4500);
+
+  /* 앵커 부드러운 스크롤 (setInterval 구동) */
+  var head=document.querySelector('.site-head');
+  var ease=function(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; };
+  document.addEventListener('click', function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href'); if(id.length<2) return;
+    var target=id==='#top' ? document.body : document.querySelector(id); if(!target) return;
+    ev.preventDefault();
+    var off=(head ? head.offsetHeight : 0)+6, startY=window.pageYOffset;
+    var endY=target===document.body ? 0 : Math.max(0, target.getBoundingClientRect().top+startY-off);
+    var dist=endY-startY, dur=Math.min(900, Math.max(420, Math.abs(dist)*.45)), t0=Date.now();
+    var tm=setInterval(function(){ var p=Math.min(1,(Date.now()-t0)/dur); window.scrollTo(0, startY+dist*ease(p)); if(p>=1) clearInterval(tm); }, 16);
+    if(history.replaceState) history.replaceState(null,'',id);
+  });
+})();
+</script>
+</body>
+</html>
